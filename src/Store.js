@@ -1,6 +1,5 @@
 import { writable } from 'svelte/store';
 import { load_image } from './utils';
-import { select } from "./select";
 function createStore() {
   const { subscribe, set, update } = writable({
     celebs: { data: [], lookup: new Map(), selected: [] },
@@ -32,7 +31,8 @@ function createStore() {
         return false;
       }
     },
-    selection: (slug) => {
+    selection: async (slug) => {
+      const { select } = await import("./select")
       update(state => {
         const { data, lookup } = state.celebs;
         const selected = select(data, lookup, slug);

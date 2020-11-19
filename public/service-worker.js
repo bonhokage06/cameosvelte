@@ -1,4 +1,4 @@
-const CACHE_NAME = "cache_" + 1605803408170;
+const CACHE_NAME = "cache_" + 1605820516451;
 const shell = ['/',
     '/asset-manifest.json',
     '/icons/right.svg',

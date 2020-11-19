@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "snowpack dev",
-    "build": "rollup -c && firebase deploy",
+    "build": "rollup -c",
     "dev-server": "nodemon server"
   },
   "devDependencies": {
@@ -16,7 +16,8 @@
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-svelte": "^6.1.1",
     "snowpack": "^2.17.1",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-loadable": "^1.5.0"
   },
   "dependencies": {}
 }

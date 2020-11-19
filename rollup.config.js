@@ -25,8 +25,9 @@ export default [{
   input: 'src/index.js',
   output: {
     name: "App",
-    file: './build/bundle.js',
-    format: "iife"
+    dir: './build/',
+    format: "es",
+    entryFileNames: "[name].js"
   },
   plugins: [
     css({ output: "./build/bundle.css" }), svelte(), commonjs(), strip(), nodeResolve(), copy({ patterns: '**/*.{svg,jpg,json,png}', rootDir: "./public" })
