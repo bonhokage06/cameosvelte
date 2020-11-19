@@ -11,15 +11,14 @@
 <style>
   .card-outer {
     width: 100%;
-    height: 80%;
+    height: 70%;
   }
   .card-inner {
     color: white;
     width: 100%;
     height: 100%;
-    background: 50% 50% no-repeat;
-    background-position: 100% 0;
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     padding: 0;
     display: flex;
