@@ -40,12 +40,22 @@
     text-indent: -9999px;
   }
   .categories {
-    max-width: 100%;
-    margin: 0;
+    width: 100%;
+    max-width: 26em;
   }
   .categories > button {
-    margin: 0.2em;
+    margin: 0.3em;
     padding: 1em;
+    display: block;
+    width: 100%;
+  }
+  @media (min-width: 640px) {
+    .categories > button {
+      margin: 0.2em;
+      padding: 1em;
+      display: inline;
+      width: auto;
+    }
   }
 </style>
 

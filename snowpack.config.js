@@ -4,11 +4,11 @@
 // const commonjs = require("@rollup/plugin-commonjs");
 // const strip = require("@rollup/plugin-strip");
 module.exports = {
-  "mount": {
-    "public": "/",
-    "src": "/src"
-  },
-  "plugins": [
-    "@snowpack/plugin-svelte"
-  ]
+    "mount": {
+        "public": "/",
+        "src": "/src"
+    },
+    "plugins": [
+        "@snowpack/plugin-svelte"
+    ]
 }

@@ -10,6 +10,7 @@
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-strip": "^2.0.0",
     "@snowpack/plugin-svelte": "^3.3.0",
+    "@web/rollup-plugin-copy": "^0.2.0",
     "rollup": "^2.33.3",
     "rollup-plugin-css-only": "^2.1.0",
     "rollup-plugin-svelte": "^6.1.1",

@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { load_image } from './utils';
 import { select } from "./select";
 function createStore() {
   const { subscribe, set, update } = writable({
@@ -48,6 +49,9 @@ function createStore() {
 }
 const load_celeb_details = async (celeb) => {
   const res = await fetch(`https://cameo-explorer.netlify.app/celebs/${celeb.id}.json`);
-  return await res.json();
+  const details = await res.json();
+  //wait for image to load
+  await load_image(details.image);
+  return await details;
 }
 export const store = createStore();
