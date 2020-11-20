@@ -4,7 +4,7 @@ const shell = ['/',
     '/icons/right.svg',
     '/icons/wrong.svg',
     '/icons/compare.svg',
-    '/bundle.js',
+    '/index.js',
     '/bundle.css'];
 
 self.addEventListener('install', event => {

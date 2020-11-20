@@ -1,10 +1,10 @@
-const CACHE_NAME = "cache_" + 1605821891755;
+const CACHE_NAME = "cache_" + 1605878851057;
 const shell = ['/',
     '/asset-manifest.json',
     '/icons/right.svg',
     '/icons/wrong.svg',
     '/icons/compare.svg',
-    '/bundle.js',
+    '/index.js',
     '/bundle.css'];
 
 self.addEventListener('install', event => {

@@ -5,32 +5,35 @@ import commonjs from "@rollup/plugin-commonjs";
 import strip from "@rollup/plugin-strip";
 import replace from "@rollup/plugin-replace";
 import { copy } from '@web/rollup-plugin-copy';
-export default [{
-  input: "src/service-worker.js", output: {
-    file: "./build/service-worker.js",
-    format: "esm",
+import del from 'rollup-plugin-delete';
+export default [
+  {
+    input: "src/service-worker.js", output: {
+      file: "./public/service-worker.js",
+      format: "esm",
+    },
+    plugins: [replace({
+      TIMESTAMP: Date.now()
+    })]
   },
-  plugins: [replace({
-    TIMESTAMP: Date.now()
-  })]
-}, {
-  input: "src/service-worker.js", output: {
-    file: "./public/service-worker.js",
-    format: "esm",
-  },
-  plugins: [replace({
-    TIMESTAMP: Date.now()
-  })]
-}, {
-  input: 'src/index.js',
-  output: {
-    name: "App",
-    dir: './build/',
-    format: "es",
-    entryFileNames: "[name].js"
-  },
-  plugins: [
-    css({ output: "./build/bundle.css" }), svelte(), commonjs(), strip(), nodeResolve(), copy({ patterns: '**/*.{svg,jpg,json,png}', rootDir: "./public" })
-  ]
-}
+  {
+    input: "src/service-worker.js", output: {
+      file: "./build/service-worker.js",
+      format: "esm",
+    },
+    plugins: [replace({
+      TIMESTAMP: Date.now()
+    }), del({ targets: 'build/*.js' })]
+  }, {
+    input: 'src/index.js',
+    output: {
+      name: "App",
+      dir: './build/',
+      format: "es",
+      entryFileNames: "[name].js"
+    },
+    plugins: [
+      css({ output: "./build/index.css" }), svelte(), commonjs(), strip(), nodeResolve(), copy({ patterns: '**/*.{svg,jpg,json,png}', rootDir: "./public" })
+    ]
+  }
 ];

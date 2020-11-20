@@ -1,6 +1,6 @@
 import { pick_random } from './utils.js';
 
-const ROUNDS_PER_GAME = 10;
+const ROUNDS_PER_GAME = 1;
 
 function remove(array, index) {
 	// if a 'similar' account was picked, there's no
