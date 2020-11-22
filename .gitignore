@@ -6,3 +6,4 @@ build
 firebase.json
 package-json.lock
 yarn.lock
+public/service-worker.js
