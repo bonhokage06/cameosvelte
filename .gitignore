@@ -4,3 +4,4 @@ build
 .firebase
 .firebasec
 firebase.json
+package-json.lock
