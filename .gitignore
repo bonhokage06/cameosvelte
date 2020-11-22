@@ -5,3 +5,4 @@ build
 .firebasec
 firebase.json
 package-json.lock
+yarn.lock
